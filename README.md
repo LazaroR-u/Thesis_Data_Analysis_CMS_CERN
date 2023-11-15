@@ -5,14 +5,42 @@ This repository contains the code used for the analysis of current data generate
 # 1_Comparison_Map_Functions_RPCs_CERN
 In this notebook we implement the new map function to the current data and compare it with the Mapse mapping function. Here, we used only the Mapse mapping dataframe that includes 1050/1056 chambers.
 
+Mapse map function: map only the second chamber name in the duplicate DPIDs.
+![image](https://github.com/LazaroR-u/Thesis_Data_Analysis_CMS_CERN/assets/80428982/d1875462-8d9d-4f2a-93c5-e08d98144140)
+
+
+
+New map function: map both chamber names in the duplicate DPIDs. 
+![image](https://github.com/LazaroR-u/Thesis_Data_Analysis_CMS_CERN/assets/80428982/50ecdfef-d1f6-4900-9fb4-d6576d193643)
+
+
+Why is this important? because there are duplicate DPIDs in the endcap region and we make histograms of the average currents measured a certain applied voltage per date. This affects the number of entries in the histograms and the distribution. 
+
+
+![image](https://github.com/LazaroR-u/Thesis_Data_Analysis_CMS_CERN/assets/80428982/a2a6b98a-75ec-479c-bb75-dc510cb25fe2)
+
+An observation is that the Mapse Mapping Dataframe contains 1050 out of 1056 chambers. So, Where there are this six missing chambers? 
+
 # 2_Analysis_of_Label_Change_History_RPCs
 Within this notebook, we initiate by crafting a new mapping dataframe sourced from the label change history file. Subsequently, we conduct a comparative analysis against the existing Mapse mapping dataframe.
+![image](https://github.com/LazaroR-u/Thesis_Data_Analysis_CMS_CERN/assets/80428982/a252d44a-cb36-4cef-bef6-428c6ae51686)
+
+![image](https://github.com/LazaroR-u/Thesis_Data_Analysis_CMS_CERN/assets/80428982/b88bca34-ff04-4bbe-9e66-c0468a10b584)
+![image](https://github.com/LazaroR-u/Thesis_Data_Analysis_CMS_CERN/assets/80428982/0c04a4ba-66bb-4fd0-8569-577314328601)
+
+
+We found that the new mapping dataframe includes the 6 missing chambers of Mapse mapping dataframe. 
+
 
 Following this, we enhance the new mapping dataframe by appending suffixes to the duplicate DPIDs, enabling the mapping of both chamber names using our updated mapping function.
 
+![image](https://github.com/LazaroR-u/Thesis_Data_Analysis_CMS_CERN/assets/80428982/e771f357-c152-4cf0-8182-3a4644f1f3cb)
+
 We then proceed to apply both map functions: the Mapse mapping function and our new mapping function to the currents data, facilitating a thorough comparative study between the two.
 
+
 Lastly, we meticulously scrutinize the differences by **comparing the histograms** derived from these two sets of mapped current data.
+
 
 # 3_New_Currents_Distributions_Analysis
 
@@ -23,3 +51,7 @@ In our approach, we introduce the following enhancements:
 Updated Mapping Dataframe: We have generated a new mapping dataframe from the RPC label change history data, incorporating information for 1056 chambers and their respective HV DPIDs. In contrast, the Mapse mapping dataframe comprises only 1050 chambers, leaving six chambers unaccounted for.
 
 Enhanced Mapping Function: We have developed a new mapping function that takes into consideration both chamber names for duplicate DPIDs. In comparison, the Mapse mapping function only provides one chamber name for duplicate DPIDs. This improvement allows for a more comprehensive and accurate mapping of chamber data, specially, in the entries of the histograms for the Endcap region.
+
+![image](https://github.com/LazaroR-u/Thesis_Data_Analysis_CMS_CERN/assets/80428982/587b3f49-c714-4a76-bcd5-f77768ec409d)
+
+
