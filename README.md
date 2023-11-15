@@ -12,9 +12,9 @@ Following this, we enhance the new mapping dataframe by appending suffixes to th
 
 We then proceed to apply both map functions: the Mapse mapping function and our new mapping function to the currents data, facilitating a thorough comparative study between the two.
 
-Lastly, we meticulously scrutinize the differences by** comparing the histograms** derived from these two sets of mapped current data.
+Lastly, we meticulously scrutinize the differences by **comparing the histograms** derived from these two sets of mapped current data.
 
-3_New_Currents_Distributions_Analysis
+# 3_New_Currents_Distributions_Analysis
 
 This study builds upon the analysis conducted by Mapse Ferreira.
 
